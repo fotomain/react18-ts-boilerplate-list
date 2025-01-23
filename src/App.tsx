@@ -4,6 +4,7 @@ import {Dictionary, useDictionary} from "./hooks/useDirectory";
 import {List} from "./components/List";
 
 const App = () => {
+
   const dictionary:Dictionary = useDictionary();
   return (
       <div className="app">
@@ -18,6 +19,7 @@ const App = () => {
         </div>
       </div>
   )
+
 }
 
 export default App
