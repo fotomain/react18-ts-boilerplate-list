@@ -11,7 +11,6 @@ export const CONTAINER_HEIGHT = 400
 export const ITEM_HEIGHT = 30
 export const ITEMS_ON_1_PAGE = CONTAINER_HEIGHT / ITEM_HEIGHT
 export const GAP = 15
-
 const bufferedItems = 2;
 
 console.log("=== ITEMS_ON_1_PAGE ",ITEMS_ON_1_PAGE)
