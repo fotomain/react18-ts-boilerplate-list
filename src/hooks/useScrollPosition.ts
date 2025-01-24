@@ -1,18 +1,39 @@
-import { useEffect, useState } from "react"
 
-export type Dictionary = string[];
+import { RefObject, useCallback, useLayoutEffect, useRef, useState } from 'react'
 
-const fetchDictionary = async (): Promise<Dictionary> => {
-    const data = await fetch("https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt")
-    const text = await data.text()
-    return text.split("\r\n")
+const useScrollPosition = (
+    element: RefObject<HTMLElement>,
+    wait: number = 0
+) => {
+    const [position, setPosition] = useState(0);
+    let throttleTimeout: NodeJS.Timeout | null = null
+
+    const callBack = useCallback(() => {
+        if(element.current) {
+            setPosition(element.current.scrollTop);
+            throttleTimeout = null
+        }}, [element]);
+
+    useLayoutEffect(() => {
+        const handleScroll = () => {
+            if (wait) {
+                if (throttleTimeout === null) {
+                    throttleTimeout = setTimeout(callBack, wait)
+                }
+            } else {
+                callBack()
+            }
+        }
+        if(element.current) {
+                element.current.addEventListener('scroll', handleScroll)
+                return () => {
+                    if(element.current)
+                        element.current.removeEventListener('scroll', handleScroll)
+                }
+            }
+        }, [callBack, element])
+
+    return position;
 }
 
-export const useDictionary = () => {
-    const [dictionary, setDictionary] = useState<Dictionary>([]);
-    useEffect(() => {
-        fetchDictionary().then(setDictionary);
-    }, []);
-
-    return dictionary;
-}
+export default useScrollPosition

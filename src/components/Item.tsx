@@ -1,6 +1,7 @@
 
 import styled from '@emotion/styled'
-import React, { FC } from 'react'
+import React, {FC, useMemo} from 'react'
+import {ITEM_HEIGHT} from "./List";
 
 const Wrapper = styled.li`
   width: 100%;  
@@ -18,5 +19,16 @@ export interface ItemProps {
 }
 
 export const Item: FC<ItemProps> = ({ children }) => {
-    return <Wrapper>{children}</Wrapper>
+
+    // const retItem = useMemo(
+    //     ()=><Wrapper>{children}</Wrapper>,
+    //     [children]
+    // )
+
+    // return retItem
+    return <Wrapper
+                style={{height:ITEM_HEIGHT+'px'}}
+            >
+                {children}
+            </Wrapper>
 }

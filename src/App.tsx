@@ -13,7 +13,11 @@ const App = () => {
             <span>React Virtualized List</span>
           </div>
         </div>
-        <div className="content">
+        <div className="content"
+             onScroll={(e)=>{
+                 console.log("=== onScroll ",e)
+             }}
+        >
             {/* eslint-disable-next-line react/jsx-no-undef */}
           <List items={dictionary} />
         </div>

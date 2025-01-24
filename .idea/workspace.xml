@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cf35e838-4b4c-4ed3-be91-698b7b6d620b" name="Changes" comment="111" />
+    <list default="true" id="cf35e838-4b4c-4ed3-be91-698b7b6d620b" name="Changes" comment="111">
+      <change afterPath="$PROJECT_DIR$/src/test.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/List.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/List.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useDirectory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useDirectory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useScrollPosition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useScrollPosition.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,12 +28,12 @@
     &quot;assignee&quot;: &quot;fotomain&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/fotomain/react18-ts-boilerplate-list.git",
-    "accountId": "f8d088ac-211a-4a6c-823f-f3af20c02671"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/fotomain/react18-ts-boilerplate-list.git&quot;,
+    &quot;accountId&quot;: &quot;f8d088ac-211a-4a6c-823f-f3af20c02671&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -37,13 +46,13 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/W/RE2/reactapp1",
+    "last_opened_file_path": "C:/W/codepad-LIST",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\W\\RE2\\reactapp1\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\W\\codepad-LIST\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -82,7 +91,8 @@
       <workItem from="1737654783079" duration="1533000" />
       <workItem from="1737656372139" duration="725000" />
       <workItem from="1737657129261" duration="58000" />
-      <workItem from="1737657189466" duration="559000" />
+      <workItem from="1737657189466" duration="5077000" />
+      <workItem from="1737710297037" duration="1854000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <option name="closed" value="true" />
@@ -100,7 +110,23 @@
       <option name="project" value="LOCAL" />
       <updated>1737655013143</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="111">
+      <option name="closed" value="true" />
+      <created>1737657781798</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737657781798</updated>
+    </task>
+    <task id="LOCAL-00004" summary="111">
+      <option name="closed" value="true" />
+      <created>1737657880830</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737657880830</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

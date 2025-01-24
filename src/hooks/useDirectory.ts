@@ -5,7 +5,9 @@ export type Dictionary = string[];
 const fetchDictionary = async (): Promise<Dictionary> => {
     const data = await fetch("https://raw.githubusercontent.com/dwyl/english-words/master/words_alpha.txt")
     const text = await data.text()
-    return text.split("\r\n")
+    const retArray = text.split("\n")
+    console.log('=== retArray',retArray.length)
+    return retArray
 }
 
 export const useDictionary = () => {
