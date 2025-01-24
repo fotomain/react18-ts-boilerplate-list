@@ -1,9 +1,10 @@
 
 import styled from '@emotion/styled'
-import React, {FC, useMemo} from 'react'
-import {ITEM_HEIGHT} from "./List";
+import React, {FC} from 'react'
+
 
 const Wrapper = styled.li`
+  position:absolute; //=== STEP
   width: 100%;  
   height: 30px;
   border-bottom: 1px solid black;
@@ -16,18 +17,14 @@ const Wrapper = styled.li`
 
 export interface ItemProps {
     children: React.ReactNode;
+    item_style?:any;
 }
 
-export const Item: FC<ItemProps> = ({ children }) => {
+export const Item: FC<ItemProps> = ({ children,item_style }) => {
 
-    // const retItem = useMemo(
-    //     ()=><Wrapper>{children}</Wrapper>,
-    //     [children]
-    // )
-
-    // return retItem
     return <Wrapper
-                style={{height:ITEM_HEIGHT+'px'}}
+                //=== STEP
+                style={{...item_style}}
             >
                 {children}
             </Wrapper>

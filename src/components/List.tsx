@@ -6,10 +6,13 @@ import { SafelyRenderChildren } from "./SafelyRenderChildren";
 import {Dictionary} from "../hooks/useDirectory";
 import useScrollPosition from "../hooks/useScrollPosition";
 
+//=== STEP
+export const CONTAINER_HEIGHT = 500
+export const ITEM_HEIGHT = 30
+export const ITEMS_ON_1_PAGE = CONTAINER_HEIGHT / ITEM_HEIGHT
+export const GAP = 15
 
-export const SCROLL_HEIGHT = 500
-export const ITEM_HEIGHT = 50
-export const ITEMS_ON_1_PAGE = SCROLL_HEIGHT / ITEM_HEIGHT
+const bufferedItems = 2;
 
 console.log("=== ITEMS_ON_1_PAGE ",ITEMS_ON_1_PAGE)
 
@@ -27,52 +30,82 @@ const ListWrapper = styled.ul`
 `;
 
 export interface ListProps {
+    //=== STEP
     items: Dictionary;
 }
 
 export const List: FC<ListProps> = ({ items }) => {
 
+    //=== STEP
     const refList:RefObject<HTMLElement>=useRef<HTMLElement>(null)
 
+    //=== STEP
     const position:any = useScrollPosition(
         refList
     )
 
-    // https://stackoverflow.com/questions/62366759/virtualized-list-with-reactjs
+    console.log("=== onScroll position",position)
 
-    const itemsFrom = Math.ceil( position / ITEMS_ON_1_PAGE )
-    const itemsTo = itemsFrom + ITEMS_ON_1_PAGE
+    //=== DOC https://stackoverflow.com/questions/62366759/virtualized-list-with-reactjs
 
-    console.log("=== items N",itemsFrom, itemsTo)
+    //=== STEP
+    const visibleChildren = useMemo(() => {
 
-    // TODO items -> itemsVisible
-    // itemsFrom = Math.ceil( position / ITEMS_ON_1_PAGE ) + ITEMS_ON_1_PAGE
-    // itemsVisible = F( itemsFrom , itemsTo )
+        const startIndex = Math.max(
+            Math.floor(position / ITEM_HEIGHT) - bufferedItems,
+            0
+        );
+
+        const endIndex =
+            Math.min(
+                items.length-1,
+                Math.ceil((position + CONTAINER_HEIGHT) / ITEM_HEIGHT - 1 ) + bufferedItems
+            )
+
+        console.log("=== startIndex endIndex",startIndex, endIndex)
+
+        const retDaga =  items.slice(startIndex, endIndex + 1).map((word, index) => {
+            return <Item key={word}
+                      item_style={{
+                          top: (startIndex + index) * ITEM_HEIGHT + index * GAP,
+                          height: ITEM_HEIGHT,
+                          left: 0,
+                          right: 0,
+                          lineHeight: `${ITEM_HEIGHT}px`
+                      }}
+                >
+                    {word}
+                    {items.indexOf(word)}
+                </Item>
+
+        })
+        console.log("=== visibleChildren",retDaga)
+        return  retDaga
+
+    },[
+        items,
+        position
+    ])
 
     return (
         <ScrollWrapper
-            style={{height: SCROLL_HEIGHT+'px'}}
-            ref={refList as LegacyRef<HTMLDivElement> }
-            onScroll={(e)=>{
-                console.log("=== onScroll position",position)
+            style={{
+                position:'fixed', //=== STEP
+                height: CONTAINER_HEIGHT+'px',
             }}
+            //=== STEP
+            ref={refList as LegacyRef<HTMLDivElement> }
         >
             <ListWrapper>
-                {/**
-                 * Note: `SafelyRenderChildren` should NOT be removed while solving
-                 * this interview. This prevents rendering too many list items and
-                 * potentially crashing the web page. This also enforces an artificial
-                 * limit (5,000) to the amount of children that can be rendered at one
-                 * time during virtualization.
-                 *
-                 * {items.slice(itemsFrom, itemsTo).map((word) => {
-                 *
-                 */}
+
                 <SafelyRenderChildren>
 
-                    {items.slice(0, 5000).map((word) => {
-                            return <Item key={word}>{word}</Item>
-                    })}
+                    {/* //=== STEP */}
+                    {visibleChildren}
+
+                    {/*{items.slice(0, 5000).map((word) => {*/}
+                    {/*        return <Item key={word}>{word}</Item>*/}
+                    {/*})}*/}
 
                 </SafelyRenderChildren>
             </ListWrapper>
