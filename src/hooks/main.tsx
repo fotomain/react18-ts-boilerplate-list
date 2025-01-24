@@ -1,11 +1,11 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import App from "../App";
+import AppListVirtualised from "../AppListVirtualised";
 
 ReactDOM.render(
     <React.StrictMode>
-        <App />
+        <AppListVirtualised />
     </React.StrictMode>,
     document.getElementById('root')
 )

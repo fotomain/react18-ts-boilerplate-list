@@ -3,7 +3,7 @@ import React from "react";
 import {Dictionary, useDictionary} from "./hooks/useDirectory";
 import {List} from "./components/List";
 
-const App = () => {
+const AppListVirtualised = () => {
 
   const dictionary:Dictionary = useDictionary();
 
@@ -23,4 +23,4 @@ const App = () => {
 
 }
 
-export default App
+export default AppListVirtualised

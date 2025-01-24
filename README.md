@@ -5,6 +5,8 @@ react18-ts-boilerplate-count
 taskkill /im node.exe /f
 
 # Setup 
+npm install @mui/material @emotion/react @emotion/styled
+npm install @monaco-editor/react
 
 npm i
 

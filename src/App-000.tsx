@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { flushSync } from 'react-dom';
 import './App.css';
 
-function App() {
+function AppListVirtualised() {
   const [count, setCount] = useState(0);
   const [toggle, setToggle] = useState(false);
   const handleClick = () => {
@@ -25,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+export default AppListVirtualised;
