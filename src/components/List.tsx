@@ -7,7 +7,7 @@ import {Dictionary} from "../hooks/useDirectory";
 import useScrollPosition from "../hooks/useScrollPosition";
 
 //=== STEP
-export const CONTAINER_HEIGHT = 500
+export const CONTAINER_HEIGHT = 400
 export const ITEM_HEIGHT = 30
 export const ITEMS_ON_1_PAGE = CONTAINER_HEIGHT / ITEM_HEIGHT
 export const GAP = 15
