@@ -6,6 +6,7 @@ import {List} from "./components/List";
 const App = () => {
 
   const dictionary:Dictionary = useDictionary();
+
   return (
       <div className="app">
         <div className="header">
@@ -13,11 +14,7 @@ const App = () => {
             <span>React Virtualized List</span>
           </div>
         </div>
-        <div className="content"
-             onScroll={(e)=>{
-                 console.log("=== onScroll ",e)
-             }}
-        >
+        <div className="content">
             {/* eslint-disable-next-line react/jsx-no-undef */}
           <List items={dictionary} />
         </div>
