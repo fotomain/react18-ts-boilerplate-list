@@ -4,7 +4,7 @@ import React, {FC} from 'react'
 
 
 const Wrapper = styled.li`
-  position:absolute; //// @@@@@@@@@
+  position:absolute; //// ████████████
   width: 100%;  
   height: 30px;
   border-bottom: 1px solid black;
@@ -23,7 +23,7 @@ export interface ItemProps {
 export const Item: FC<ItemProps> = ({ children,item_style }) => {
 
     return <Wrapper
-                //// @@@@@@@@@
+                //// ████████████
                 style={{...item_style}}
             >
                 {children}

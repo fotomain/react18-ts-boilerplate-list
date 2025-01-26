@@ -64,7 +64,7 @@ function AppTODOTest() {
     }, []);
 
 
-    //// @@@@@@@@@
+    // ████████████
     const handleChange = useCallback((id:string, checked: boolean) => {
         // handle the check/uncheck logic
         const elementById = todos.find(el=>el.id === id);
@@ -89,7 +89,7 @@ function AppTODOTest() {
             console.log("=== newData",newData)
              return newData as Todo[]
             }
-        );
+        );// setTodos
 
     },[setTodos,todos])
 
@@ -100,10 +100,9 @@ function AppTODOTest() {
             <TodoList>
                 {todos.map((todo) => (
                     <TodoItem {...todo}
+                        // ████████████
                         onChange={(checked:any)=>{
-                            //// @@@@@@@@@
-                            console.log("=== checked ",checked)
-                            handleChange(todo.id,!todo.checked)
+                            handleChange(todo.id,checked)
                         }}
                     />
                 ))}

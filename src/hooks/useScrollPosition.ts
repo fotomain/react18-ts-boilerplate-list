@@ -9,7 +9,7 @@ const useScrollPosition = (
     let throttleTimeout: NodeJS.Timeout | null = null
 
     const callBack = useCallback(() => {
-        //// @@@@@@@@@
+        //// ████████████
         if(element.current) {
             setPosition(element.current.scrollTop);
             throttleTimeout = null
@@ -25,11 +25,11 @@ const useScrollPosition = (
                 callBack()
             }
         }
-        //// @@@@@@@@@
+        //// ████████████
         if(element.current) {
             element.current.addEventListener('scroll', handleScroll)
             return () => {
-                //// @@@@@@@@@
+                //// ████████████
                 if(element.current)
                     element.current.removeEventListener('scroll', handleScroll)
             }
