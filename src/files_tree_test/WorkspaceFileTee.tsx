@@ -10,12 +10,6 @@ import show_arrays from "../show_arrays";
 
 export const WorkspaceFileTee = () => {
 
-    useEffect(() => {
-        // var dataTree = defaultFiles.map(el=>{
-        //     return {id:0, nodeName:'', parentId:0, file:el}
-        // })
-    }, []);
-
      return (
         <WorkspaceProvider files={defaultFiles}>
             <Box display='flex' height='100%'>
