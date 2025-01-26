@@ -11,9 +11,9 @@ if(container) {
     const root = createRoot(container); // createRoot(container!) if you use TypeScript
     root.render(
 
-        // <WorkspaceFileTee/>
+        <WorkspaceFileTee/>
 
-        <AppListVirtualised />
+        // <AppListVirtualised />
 
         // <ListMedium/>
     );
