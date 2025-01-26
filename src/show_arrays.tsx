@@ -24,6 +24,23 @@ const show_arrays=()=>{
             }
         }
     }
+
+    const addElement = ( obj:any, params:any, val:any )=>{
+        obj[params.x] = new Object()
+        obj[params.x][params.y] = new Object()
+        obj[params.x][params.y][params.z] = val
+        return obj
+    }
+
+    const el88:any = addElement(Object3d, {x:'x88', y:'y88', z:'z88'},"55555555555")
+    console.log("=== el88",el88)
+
+    Object3d.x99 = new Object()
+    Object3d.x99.y99 = new Object()
+    Object3d.x99.y99.z99 = "999999999999"
+
+
+    console.log("=== Object3d.x99.y99.z99",Object3d.x99.y99.z99)
     console.log("=== Object3d.x1.y1.z1",Object3d.x1.y1.z1)
     Object3d.x1.y1.z1 = "RRRRRRRRRRRR"
     console.log("=== Object3d.x1.y1.z1",Object3d.x1.y1.z1)
@@ -31,4 +48,4 @@ const show_arrays=()=>{
 
 }
 
-export {show_arrays}
+export default show_arrays

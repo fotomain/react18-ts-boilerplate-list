@@ -6,6 +6,7 @@ import { WorkspaceProvider } from './WorkspaceContext'
 import defaultFiles from './defaultFiles'
 import {Editor} from "./Editor";
 import {FilePane} from "./file/FilePane";
+import show_arrays from "../show_arrays";
 
 export const WorkspaceFileTee = () => {
 
@@ -30,6 +31,8 @@ export const WorkspaceFileTee = () => {
 
         console.log("=== dataTree",dataTree)
 
+        show_arrays()
+
     }, []);
 
      return (
@@ -41,3 +44,4 @@ export const WorkspaceFileTee = () => {
         </WorkspaceProvider>
     )
 }
+
