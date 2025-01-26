@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import AppListVirtualised from './AppListVirtualised';
+import AppListVirtualised from './list_virtualized/AppListVirtualised';
 
 test('renders learn react link', () => {
   render(<AppListVirtualised />);

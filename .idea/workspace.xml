@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cf35e838-4b4c-4ed3-be91-698b7b6d620b" name="Changes" comment="111">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files_tree_test/WorkspaceFileTee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/files_tree_test/WorkspaceFileTee.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/show_arrays.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/show_arrays.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppListVirtualised.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_virtualized/AppListVirtualised.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files_tree_test/defaultFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/files_tree_test/defaultFiles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +67,8 @@
       <recent name="C:\W\RE2\reactapp1\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\W\codepad-LIST\src\list_virtualized" />
+      <recent name="C:\W\codepad-LIST\src" />
       <recent name="C:\W\codepad-LIST\src\files_tree_test\file" />
       <recent name="C:\W\RE2\reactapp1\src" />
     </key>
@@ -92,7 +96,7 @@
       <workItem from="1737719469974" duration="9172000" />
       <workItem from="1737729169862" duration="2337000" />
       <workItem from="1737731644289" duration="3393000" />
-      <workItem from="1737881797101" duration="2766000" />
+      <workItem from="1737881797101" duration="3100000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <option name="closed" value="true" />
@@ -182,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737886460424</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="111">
+      <option name="closed" value="true" />
+      <created>1737887206174</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1737887206174</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

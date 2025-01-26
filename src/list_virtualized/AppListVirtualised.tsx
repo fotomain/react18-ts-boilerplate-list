@@ -1,7 +1,7 @@
 
 import React from "react";
-import {Dictionary, useDictionary} from "./hooks/useDirectory";
-import {List} from "./components/List";
+import {Dictionary, useDictionary} from "../hooks/useDirectory";
+import {List} from "./List";
 
 const AppListVirtualised = () => {
 

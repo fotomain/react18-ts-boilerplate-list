@@ -106,7 +106,7 @@ export const WidgetList = ({ widgets }) => {
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/AppListVirtualised.tsx"></script>
+    <script type="module" src="/src/list_virtualized/AppListVirtualised.tsx"></script>
     <script type="module" src="/style.css"></script>
   </body>
 </html>`
