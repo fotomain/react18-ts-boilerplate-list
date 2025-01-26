@@ -63,9 +63,38 @@ function AppTODOTest() {
         ]);
     }, []);
 
-    const handleChange = useCallback((checked: boolean) => {
+    // const handleChange = useCallback((checked: boolean) => {
+    //     // handle the check/uncheck logic
+    // }, []);
+
+    // @@@@@@@@@@@@@@@@@@@@@@@@@
+    const handleChange = (id:string, checked: boolean) => {
         // handle the check/uncheck logic
-    }, []);
+        const elementById = todos.find(el=>el.id === id);
+        const indexChange = todos.indexOf(elementById as Todo)
+        console.log('=== indexChange',indexChange)
+        setTodos((prev:Todo[]) => {
+              var newData
+              if(checked) {
+                  newData = [
+                      ...prev.slice(0, indexChange),
+                      ...prev.slice(indexChange + 1),
+                      {...elementById, checked: checked},
+                  ]
+              } else
+              {
+                  newData = [
+                      {...elementById, checked: checked},
+                      ...prev.slice(0, indexChange),
+                      ...prev.slice(indexChange + 1),
+                  ]
+              }
+            console.log("=== newData",newData)
+             return newData as Todo[]
+            }
+        );
+
+    }
 
     return (
         <Wrapper>
@@ -73,7 +102,13 @@ function AppTODOTest() {
             <AddInput onAdd={addTodo} />
             <TodoList>
                 {todos.map((todo) => (
-                    <TodoItem {...todo} onChange={handleChange} />
+                    <TodoItem {...todo}
+                        onChange={(checked:any)=>{
+                            // @@@@@@@@@@@@@@@@@@@@@@@@@
+                            console.log("=== checked ",checked)
+                            handleChange(todo.id,!todo.checked)
+                        }}
+                    />
                 ))}
             </TodoList>
         </Wrapper>
