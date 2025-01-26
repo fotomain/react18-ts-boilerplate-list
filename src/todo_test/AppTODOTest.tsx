@@ -63,12 +63,9 @@ function AppTODOTest() {
         ]);
     }, []);
 
-    // const handleChange = useCallback((checked: boolean) => {
-    //     // handle the check/uncheck logic
-    // }, []);
 
-    // @@@@@@@@@@@@@@@@@@@@@@@@@
-    const handleChange = (id:string, checked: boolean) => {
+    //// @@@@@@@@@
+    const handleChange = useCallback((id:string, checked: boolean) => {
         // handle the check/uncheck logic
         const elementById = todos.find(el=>el.id === id);
         const indexChange = todos.indexOf(elementById as Todo)
@@ -84,8 +81,8 @@ function AppTODOTest() {
               } else
               {
                   newData = [
-                      {...elementById, checked: checked},
                       ...prev.slice(0, indexChange),
+                      {...elementById, checked: checked},
                       ...prev.slice(indexChange + 1),
                   ]
               }
@@ -94,7 +91,7 @@ function AppTODOTest() {
             }
         );
 
-    }
+    },[setTodos,todos])
 
     return (
         <Wrapper>
@@ -104,7 +101,7 @@ function AppTODOTest() {
                 {todos.map((todo) => (
                     <TodoItem {...todo}
                         onChange={(checked:any)=>{
-                            // @@@@@@@@@@@@@@@@@@@@@@@@@
+                            //// @@@@@@@@@
                             console.log("=== checked ",checked)
                             handleChange(todo.id,!todo.checked)
                         }}

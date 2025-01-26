@@ -11,18 +11,18 @@ export const workspaceContext = createContext<{
     activateFile: React.Dispatch<React.SetStateAction<string>>,
     files: File[]
 }>({
-    //=== STEP
+    //// @@@@@@@@@
     activeFile: undefined,
     activateFile: () => {},
     files: [],
 })
 
 export const WorkspaceProvider: React.FC<{ files: File[],
-    //=== STEP
+    //// @@@@@@@@@
     children:any
 }> = ({ files, children }) => {
     const [activeFilePath, setActiveFilePath] = useState<string>(
-        //=== STEP
+        //// @@@@@@@@@
         ''
     )
 

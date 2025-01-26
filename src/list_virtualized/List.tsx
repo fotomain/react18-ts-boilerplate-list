@@ -6,7 +6,7 @@ import { SafelyRenderChildren } from "./SafelyRenderChildren";
 import {Dictionary} from "../hooks/useDirectory";
 import useScrollPosition from "../hooks/useScrollPosition";
 
-//=== STEP
+//// @@@@@@@@@
 export const CONTAINER_HEIGHT = 400
 export const ITEM_HEIGHT = 30
 export const ITEMS_ON_1_PAGE = CONTAINER_HEIGHT / ITEM_HEIGHT
@@ -29,16 +29,16 @@ const ListWrapper = styled.ul`
 `;
 
 export interface ListProps {
-    //=== STEP
+    //// @@@@@@@@@
     items: Dictionary;
 }
 
 export const List: FC<ListProps> = ({ items }) => {
 
-    //=== STEP
+    //// @@@@@@@@@
     const refList:RefObject<HTMLElement>=useRef<HTMLElement>(null)
 
-    //=== STEP
+    //// @@@@@@@@@
     const position:any = useScrollPosition(
         refList
     )
@@ -47,7 +47,7 @@ export const List: FC<ListProps> = ({ items }) => {
 
     //=== DOC https://stackoverflow.com/questions/62366759/virtualized-list-with-reactjs
 
-    //=== STEP
+    //// @@@@@@@@@
     const visibleChildren = useMemo(() => {
 
         const startIndex = Math.max(
@@ -89,17 +89,17 @@ export const List: FC<ListProps> = ({ items }) => {
     return (
         <ScrollWrapper
             style={{
-                position:'fixed', //=== STEP
+                position:'fixed', //// @@@@@@@@@
                 height: CONTAINER_HEIGHT+'px',
             }}
-            //=== STEP
+            //// @@@@@@@@@
             ref={refList as LegacyRef<HTMLDivElement> }
         >
             <ListWrapper>
 
                 <SafelyRenderChildren>
 
-                    {/* //=== STEP */}
+                    {/* //// @@@@@@@@@ */}
                     {visibleChildren}
 
                     {/*{items.slice(0, 5000).map((word) => {*/}
