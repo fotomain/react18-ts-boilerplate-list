@@ -6,11 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="cf35e838-4b4c-4ed3-be91-698b7b6d620b" name="Changes" comment="111">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/files_tree_test/WorkspaceContext.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/files_tree_test/WorkspaceContext.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hooks/useScrollPosition.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useScrollPosition.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_virtualized/Item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_virtualized/Item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_virtualized/List.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_virtualized/List.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/todo_test/AppTODOTest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/todo_test/AppTODOTest.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files_tree_test/WorkspaceFileTee.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/files_tree_test/WorkspaceFileTee.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files_tree_test/defaultFiles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/files_tree_test/defaultFiles.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/files_tree_test/file/FilePane.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/files_tree_test/file/FilePane.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +73,11 @@
       <recent name="C:\W\RE2\reactapp1\src" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="83" />
+    </option>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -98,7 +102,9 @@
       <workItem from="1737729169862" duration="2337000" />
       <workItem from="1737731644289" duration="3393000" />
       <workItem from="1737881797101" duration="6784000" />
-      <workItem from="1737891342029" duration="910000" />
+      <workItem from="1737891342029" duration="3184000" />
+      <workItem from="1737895604452" duration="7258000" />
+      <workItem from="1737903309322" duration="4705000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <option name="closed" value="true" />
@@ -220,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737890430378</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="111">
+      <option name="closed" value="true" />
+      <created>1737893305585</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1737893305585</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

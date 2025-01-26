@@ -11,28 +11,9 @@ import show_arrays from "../show_arrays";
 export const WorkspaceFileTee = () => {
 
     useEffect(() => {
-        var dataTree = defaultFiles.map(el=>{
-            return el
-            // return {path:el.path}
-        })
-
-        const prepareTree = (inputData:any) =>{
-            var retData:any[]=[]
-            for (let i = 0; i < inputData.length ; i++) {
-                if(-1!==inputData[i].path.indexOf('/')){
-                    prepareTree(inputData[i])
-                }
-            }
-
-            return retData
-        }
-
-        prepareTree(dataTree)
-
-        console.log("=== dataTree",dataTree)
-
-        show_arrays()
-
+        // var dataTree = defaultFiles.map(el=>{
+        //     return {id:0, nodeName:'', parentId:0, file:el}
+        // })
     }, []);
 
      return (

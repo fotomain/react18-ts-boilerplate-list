@@ -11,11 +11,11 @@ if(container) {
     const root = createRoot(container); // createRoot(container!) if you use TypeScript
     root.render(
 
-        <AppTODOTest />
-
-        // <WorkspaceFileTee/>
+        // <AppTODOTest />
 
         // <AppListVirtualised />
+
+        <WorkspaceFileTee/>
 
     );
 }
